@@ -1,13 +1,3 @@
-# Data — never commit raw or processed financial data
-data/raw/
-data/processed/
-
-# Model artefacts — large binaries, rebuild from training
-models/
-
-# Reports — generated output, not source
-reports/
-
 # Python
 __pycache__/
 *.py[cod]
