@@ -97,7 +97,7 @@ def run(input_path: str, output_path: str,
     out = raw[[c for c in id_cols if c in raw.columns]].copy()
     out["suspension_probability"] = proba.round(4)
     out["suspension_predicted"]   = preds
-    out["risk_label"] = preds.map({1: "⚠️  HIGH RISK", 0: "✅  LOW RISK"})
+    out["risk_label"] = pd.Series(preds).map({1: "HIGH RISK", 0: "LOW RISK"}).values
 
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
     out.to_csv(output_path, index=False)
