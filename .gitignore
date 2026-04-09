@@ -1,0 +1,23 @@
+# Data — never commit raw or processed financial data
+data/raw/
+data/processed/
+
+# Model artefacts — large binaries, rebuild from training
+models/
+
+# Reports — generated output, not source
+reports/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+
+# Streamlit secrets (local only — use Streamlit Cloud secrets UI for hosted)
+.streamlit/secrets.toml
+
+# macOS
+.DS_Store
